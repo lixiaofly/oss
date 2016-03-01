@@ -1,0 +1,54 @@
+AUTOMAKE_OPTIONS=foreign
+noinst_LIBRARIES=liboss_c_sdk.a
+liboss_c_sdk_a_SOURCES=\
+    oss_util.h\
+    oss_api.h\
+    oss_auth.h\
+    aos_log.h\
+    aos_list.h\
+    aos_http_io.h\
+    aos_fstack.h\
+    aos_buf.h\
+    aos_transport.h\
+    aos_define.h\
+    oss_define.h\
+    aos_util.h\
+    aos_string.h\
+    oss_xml.h\
+    aos_status.h\
+    aos_log.c\
+    aos_fstack.c\
+    aos_string.c\
+    aos_util.c\
+    aos_status.c\
+    aos_http_io.c\
+    aos_buf.c\
+    aos_transport.c\
+    oss_xml.c\
+    oss_define.c\
+    oss_auth.c\
+    oss_bucket.c\
+    oss_multipart.c\
+    oss_util.c\
+    aos_status.c\
+    aos_http_io.c\
+    aos_buf.c\
+    aos_transport.c\
+    oss_xml.c\
+    oss_define.c\
+    oss_auth.c\
+    oss_bucket.c\
+    oss_multipart.c\
+    oss_util.c\
+    oss_object.c
+
+INCLUDES=\
+    -I.\
+    -I/usr/local/include/\
+    -I/usr/include/libxml2\
+    -I/usr/local/apr/include/apr-1\
+    -I/usr/local/apr-util/include/apr-1
+
+liboss_c_sdk_a_CFLAGS=\
+    -D_LARGEFILE64_SOURCE\
+    -fPIC

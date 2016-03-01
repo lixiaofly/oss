@@ -1,0 +1,8 @@
+#! /bin/sh
+#
+# Created by configure
+
+"./configure" \
+"--prefix=/root/oss/apr-util-dest" \
+"--with-apr=/root/oss/apr-dest" \
+"$@"

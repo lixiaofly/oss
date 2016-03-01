@@ -1,0 +1,38 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.59)
+AC_INIT(oss_c_sdk, 0.0.6)
+AC_CONFIG_HEADERS([config.h])
+AM_INIT_AUTOMAKE(oss_c_sdk, 0.0.6)
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+AC_CHECK_LIB(m, fmod)
+AC_CHECK_LIB(xml2, xmlInitParser)
+AC_CHECK_LIB(curl, curl_global_init)
+AC_CHECK_LIB(apr-1, apr_palloc)
+AC_CHECK_LIB(aprutil-1, apr_sha1_init)
+AC_PROG_RANLIB
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([inttypes.h stddef.h stdint.h stdlib.h string.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_HEADER_STDBOOL
+AC_C_INLINE
+AC_TYPE_SIZE_T
+AC_STRUCT_TM
+
+# Checks for library functions.
+AC_FUNC_STAT
+AC_FUNC_VPRINTF
+AC_CHECK_FUNCS([memmove strcasecmp strncasecmp])
+
+AC_CONFIG_FILES([Makefile
+                sample/Makefile])
+AC_OUTPUT
