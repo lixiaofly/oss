@@ -3,8 +3,8 @@ SOURCE_FILES=\
     oss_config.h\
     oss_test_util.c\
     oss_config.c\
-    oss_server.c\
-    #test_oss_object.c\
+    test_oss_object.c\
+    #oss_server.c\
 
 INCLUDES=\
     -I. -I..\
@@ -40,7 +40,7 @@ LIBS=\
     -lm
 
 all:
-	$(CC) $(SOURCE_FILES) -s $(CFLAGS) -o oss_server $(INCLUDES) $(LIBS_PATH) $(LIBS)
+	$(CC) $(SOURCE_FILES) -s $(CFLAGS) -o oss_put $(INCLUDES) $(LIBS_PATH) $(LIBS)
 
 install: all
 	@echo
